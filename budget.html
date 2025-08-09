@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AriaHQ — Budget</title><link rel="stylesheet" href="styles.css"></head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <div class="brand">
+        <div class="logo">A</div>
+        <div class="brand-text"><strong>AriaHQ</strong><span>Financial OS</span></div>
+      </div>
+      <nav class="nav">
+        <a href="index.html" class="">Dashboard</a>
+        <a href="reports.html" class="">Reports</a>
+        <a href="forecast.html" class="">Forecast</a>
+        <a href="budget.html" class="active">Budget</a>
+        <a href="approvals.html" class="">Approvals</a>
+      </nav>
+      <div class="cta">
+        <button class="btn">Connect QBO</button>
+        <button class="btn btn-primary" onclick="alert('Deck generator is stubbed for this static preview.')">Generate Deck</button>
+      </div>
+    </div>
+  </header>
+
+<main class="main">
+  <h1 style="margin:0 0 14px">Budget</h1>
+  <div class="twocol">
+    <div class="card"><strong>Section Owners</strong><table class="table"><tr><th>Section</th><th>Owner</th><th>Status</th><th>Due</th></tr><tr><td>Marketing</td><td>@alex</td><td><span class="status warn">Changes Requested</span></td><td>Aug 25</td></tr><tr><td>Sales</td><td>@sam</td><td><span class="status">Pending Approval</span></td><td>Aug 26</td></tr><tr><td>Ops</td><td>@jordan</td><td><span class="status neutral">Draft</span></td><td>Aug 28</td></tr></table></div>
+    <div class="card"><strong>Notes</strong><ul class="list"><li class="item">L1 approvals due Friday<span class="badge">Reminder</span></li><li class="item">Marketing over plan by 6%<span class="badge warn">Review</span></li><li class="item">Ops shifting $12k to Q4<span class="badge">Track</span></li></ul></div>
+  </div>
+</main>
+  <footer class="footer">
+    <div class="footer-inner"><span>Static preview — visual only.</span><span>© AriaHQ</span></div>
+  </footer>
+<button class="chat-toggle" id="chatToggle">Chat with Aria</button>
+<div class="chat-panel" id="chatPanel">
+  <div class="chat-header"><div class="chat-dot"></div><strong style="margin-left:6px">Aria</strong><span style="margin-left:6px;color:var(--muted)">online</span></div>
+  <div class="chat-body" id="chatBody"><div class="msg aria">Ask for status by section, or say “submit Marketing for approval.”</div></div>
+  <div class="chat-input"><input id="chatInput" placeholder="Ask: who owns Sales section?"><button id="chatSend">Send</button></div>
+</div>
+<script src="chat.js"></script>
+</body></html>
