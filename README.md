@@ -1,13 +1,9 @@
-# AriaHQ — Clean Static Preview (White Theme)
+# AriaHQ — Focus Static Preview (White, Minimal)
 
-This is a **visual-first** static preview with a white, minimal UI and more charts (sparklines, bar chart, donut, progress) to reduce text/input clutter.
+**Goals:** calmer white UI, fewer widgets, more visuals, lots of breathing room.
+- Large combined hero chart (Revenue + GM%)
+- Only two KPI cards on the first row
+- “Top 3 things to know” replaces busy tables
+- Visual approvals progress bar
 
-## What changed vs previous preview
-- White background, fewer borders, softer shadows
-- KPI cards with inline SVG charts
-- Drivers as a horizontal bar chart
-- Visual progress for approvals
-- Kept copy minimal; moved emphasis to visuals
-
-## Deploy
-Open `index.html` locally, or push to GitHub and deploy on Vercel (Framework: Other, no build step).
+Deploy: open `index.html` locally, or push to GitHub and deploy on Vercel (Framework: Other, no build step).
