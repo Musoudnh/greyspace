@@ -1,31 +1,13 @@
-# AriaHQ — Static Preview (Future OS)
+# AriaHQ — Clean Static Preview (White Theme)
 
-This repository contains a **static, frontend-only** preview of the AriaHQ platform UI with the glassy Apple-style aesthetic and ChatGPT-inspired accents.
+This is a **visual-first** static preview with a white, minimal UI and more charts (sparklines, bar chart, donut, progress) to reduce text/input clutter.
 
-## What’s inside
-- `index.html` — a single static page with sections for:
-  - Dashboard
-  - **TimeLens™** (replay & counterfactuals)
-  - **CFO Sense™** (root cause analysis)
-  - **PulseMatch™** (privacy-first benchmarks)
-  - **PolicyGuard™** (policy-as-code)
-  - **TrustLedger™** (tamper-evident audit)
-  - **LiquidityPilot™** (working capital autopilot)
-  - **FlowKit™** (workflow builder)
-  - Contract Intelligence
-  - Meeting Agent
-  - Control Surface (sensitivity dials)
-- No backend or JS required. It’s a visual shell for demo.
+## What changed vs previous preview
+- White background, fewer borders, softer shadows
+- KPI cards with inline SVG charts
+- Drivers as a horizontal bar chart
+- Visual progress for approvals
+- Kept copy minimal; moved emphasis to visuals
 
-## Quick start (local)
-Open `index.html` in your browser.
-
-## Deploy to Vercel
-1. Create a GitHub repo and push these files.
-2. In Vercel, click **Import Project** → **Import a Third-Party Git Repository** and paste your repo URL.
-3. Framework Preset: **Other**. No build command. Output directory: `/`.
-4. Deploy — you’ll get a live URL (e.g., `https://aria-preview.vercel.app`).
-
-## Next steps
-- Swap the static sections with your live app routes when backend is ready.
-- Keep the same domain so investors/users see continuity from preview → product.
+## Deploy
+Open `index.html` locally, or push to GitHub and deploy on Vercel (Framework: Other, no build step).
