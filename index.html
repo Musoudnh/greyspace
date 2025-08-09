@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AriaHQ — Future OS Preview</title>
+<style>
+:root{
+  --bg:#0b0c0d; --glass:rgba(32,33,35,.55); --text:#f7f7f8; --muted:#b5b7ba;
+  --border:rgba(255,255,255,.12); --accent1:#10A37F; --accent2:#1A7F64;
+  --blur:12px; --radius:16px;
+}
+*{box-sizing:border-box} body{margin:0;background:#0b0c0d;color:var(--text);font:15px/1.4 Inter,system-ui,-apple-system,Segoe UI,Arial}
+.glass{backdrop-filter:blur(var(--blur));-webkit-backdrop-filter:blur(var(--blur));background:var(--glass);border:1px solid var(--border);border-radius:var(--radius)}
+.layout{display:grid;grid-template-columns:260px 1fr 360px;gap:14px;padding:12px;min-height:100vh}
+.sidebar{padding:12px;position:sticky;top:12px;height:calc(100vh - 24px)}
+.brand{display:flex;align-items:center;gap:10px;margin:6px 0 12px}
+.logo{width:28px;height:28px;border-radius:8px;background:linear-gradient(100deg,var(--accent1),var(--accent2));display:grid;place-items:center;font-weight:700}
+.nav a{display:block;padding:9px 10px;border-radius:12px;color:var(--muted);text-decoration:none;margin:3px 0}
+.nav a:hover,.nav a.active{color:#fff;background:rgba(255,255,255,.08)}
+.top{display:flex;justify-content:space-between;align-items:center;padding:10px 14px;margin:12px}
+.btn{border:1px solid var(--border);color:var(--text);background:transparent;padding:8px 12px;border-radius:999px;cursor:pointer}
+.btn-primary{background:linear-gradient(120deg,var(--accent1),var(--accent2));border:none}
+main{padding:6px}
+.h1{font-size:20px;font-weight:700;margin:10px 0 14px 4px;color:#e6e7e8}
+.grid{display:grid;gap:12px}
+.cols-3{grid-template-columns:repeat(3,1fr)}
+.card{background:rgba(255,255,255,.06);border:1px solid var(--border);border-radius:18px;padding:14px}
+.card h3{margin:0 0 6px;font-size:14px;color:#d6d7d8}
+.kpi{font-size:26px;font-weight:800}
+.table{width:100%;border-collapse:collapse;font-size:13px}
+.table th,.table td{padding:8px;border-bottom:1px solid rgba(255,255,255,.08);text-align:left}
+.badge{padding:4px 8px;border-radius:999px;background:rgba(255,255,255,.08);font-size:12px}
+.chat{position:sticky;top:12px;height:calc(100vh - 24px);padding:10px;display:flex;flex-direction:column}
+.chat header{display:flex;align-items:center;gap:8px;border-bottom:1px solid var(--border);padding-bottom:8px;margin-bottom:8px}
+.chat .dot{width:8px;height:8px;border-radius:999px;background:#27d49c;box-shadow:0 0 8px #27d49c}
+.chat .body{flex:1;overflow:auto;display:grid;gap:8px}
+.msg{padding:10px 12px;border-radius:14px;max-width:95%}
+.msg.aria{background:rgba(255,255,255,.07);border:1px solid var(--border)}
+.msg.user{background:linear-gradient(120deg,var(--accent1),var(--accent2))}
+.footer{color:var(--muted);font-size:12px;margin-top:8px}
+.section{margin-top:10px}
+</style>
+</head>
+<body>
+  <div class="top glass">
+    <div class="brand">
+      <div class="logo">A</div>
+      <strong>AriaHQ — Future OS (static preview)</strong>
+    </div>
+    <div>
+      <button class="btn">Connect QBO</button>
+      <button class="btn btn-primary">Generate Board Deck</button>
+    </div>
+  </div>
+  <div class="layout">
+    <aside class="sidebar glass">
+      <nav class="nav">
+        <a href="#dashboard" class="active">Dashboard</a>
+        <a href="#timelens">TimeLens™</a>
+        <a href="#cfosense">CFO Sense™</a>
+        <a href="#pulsematch">PulseMatch™</a>
+        <a href="#policyguard">PolicyGuard™</a>
+        <a href="#trustledger">TrustLedger™</a>
+        <a href="#liquiditypilot">LiquidityPilot™</a>
+        <a href="#flowkit">FlowKit™</a>
+        <a href="#contracts">Contract Intelligence</a>
+        <a href="#meeting">Meeting Agent</a>
+        <a href="#controls">Control Surface</a>
+      </nav>
+      <div class="section">
+        <div class="badge">Mode: Advisor</div>
+      </div>
+    </aside>
+
+    <main>
+      <div id="dashboard">
+        <div class="h1">Dashboard</div>
+        <div class="grid cols-3">
+          <div class="card"><h3>Revenue (MTD)</h3><div class="kpi">$482,300</div></div>
+          <div class="card"><h3>Gross Margin</h3><div class="kpi">58.4%</div></div>
+          <div class="card"><h3>Cash Runway</h3><div class="kpi">11.2 months</div></div>
+        </div>
+        <div class="section card">
+          <h3>Anomalies (Proactive)</h3>
+          <table class="table">
+            <tr><th>Signal</th><th>Driver</th><th>Impact</th><th>Action</th></tr>
+            <tr><td>COGS +9% vs trend</td><td>Supplier price increase</td><td>- $18.7k</td><td><span class="badge">Investigate</span></td></tr>
+            <tr><td>AR Days +5</td><td>2 invoices late</td><td>- $12.1k CF</td><td><span class="badge">Notify</span></td></tr>
+          </table>
+        </div>
+      </div>
+
+      <div id="timelens" class="section card">
+        <h3>TimeLens™ — Replay & Counterfactuals</h3>
+        <p>Scrub through history and test “what if” scenarios. (Static preview)</p>
+        <table class="table">
+          <tr><th>Month</th><th>Event</th><th>KPI Shift</th></tr>
+          <tr><td>2025-03</td><td>Price +2%</td><td>GM +1.1%</td></tr>
+          <tr><td>2025-05</td><td>Supplier cost ↑</td><td>GM -2.4%</td></tr>
+        </table>
+      </div>
+
+      <div id="cfosense" class="section card">
+        <h3>CFO Sense™ — Root Cause</h3>
+        <p>Explains why metrics moved, with top 3 corrective actions.</p>
+        <table class="table">
+          <tr><th>Metric</th><th>Why it moved</th><th>Suggested lever</th></tr>
+          <tr><td>GM%</td><td>COGS ↑ on SKUs 1024, 1071</td><td>Negotiate 1.5% supplier discount</td></tr>
+          <tr><td>Cash</td><td>AR slippage from 2 enterprise accounts</td><td>Collections sprint, 7-day terms pilot</td></tr>
+        </table>
+      </div>
+
+      <div id="pulsematch" class="section card">
+        <h3>PulseMatch™ — Live Benchmarks (DP-safe)</h3>
+        <p>Industry + geo medians with differential privacy safeguards.</p>
+        <table class="table">
+          <tr><th>KPI</th><th>Us</th><th>Peer Median</th><th>Position</th></tr>
+          <tr><td>GM%</td><td>58.4%</td><td>52.0%</td><td><span class="badge">Top Quartile</span></td></tr>
+          <tr><td>AR Days</td><td>44</td><td>38</td><td><span class="badge">Needs Work</span></td></tr>
+        </table>
+      </div>
+
+      <div id="policyguard" class="section card">
+        <h3>PolicyGuard™ — Policy-as-Code</h3>
+        <p>Spending caps, margin floors, and approval tiers encoded as rules.</p>
+        <pre style="white-space:pre-wrap;background:rgba(0,0,0,.3);padding:10px;border-radius:12px;border:1px solid var(--border)">
+rules:
+  - name: margin_floor
+    when: forecast.gross_margin < 0.52
+    then: require_approval(level: CFO)
+  - name: spend_cap_marketing
+    when: budget.marketing.mtd > budget.marketing.plan * 1.1
+    then: freeze_autopilot & escalate: FinanceLead</pre>
+      </div>
+
+      <div id="trustledger" class="section card">
+        <h3>TrustLedger™ — Tamper-evident Audit</h3>
+        <p>Hash-chained log of financial & AI actions.</p>
+        <table class="table">
+          <tr><th>Time</th><th>Action</th><th>Hash</th></tr>
+          <tr><td>2025-08-09 10:22</td><td>AI proposed GM fix</td><td>3f9a…b21</td></tr>
+          <tr><td>2025-08-09 10:25</td><td>CFO approved scenario</td><td>7a10…8dd</td></tr>
+        </table>
+      </div>
+
+      <div id="liquiditypilot" class="section card">
+        <h3>LiquidityPilot™ — Working Capital Autopilot</h3>
+        <p>Predict gaps; sequence actions across AR/AP/credit lines.</p>
+        <table class="table">
+          <tr><th>Week</th><th>Gap</th><th>Playbook</th></tr>
+          <tr><td>W34</td><td>- $42k</td><td>Collections sprint + extend AP 7d</td></tr>
+          <tr><td>W35</td><td>- $12k</td><td>Draw LOC 25k, repay in W36</td></tr>
+        </table>
+      </div>
+
+      <div id="flowkit" class="section card">
+        <h3>FlowKit™ — Composable Automations</h3>
+        <p>Plain-English to workflow JSON. (Static example)</p>
+        <pre style="white-space:pre-wrap;background:rgba(0,0,0,.3);padding:10px;border-radius:12px;border:1px solid var(--border)">
+when COGS spikes > 5%:
+  run root_cause
+  post slack "COGS spiked — driver: supplier"
+  open approval "Apply 1.5% price increase" level: Finance</pre>
+      </div>
+
+      <div id="contracts" class="section card">
+        <h3>Contract Intelligence</h3>
+        <p>Parse terms, renewals, and pricing drift.</p>
+        <table class="table">
+          <tr><th>Vendor</th><th>Renewal</th><th>Risk</th><th>Action</th></tr>
+          <tr><td>SupplyCo</td><td>2025-10-01</td><td>Price creep 3%</td><td><span class="badge">Renegotiate</span></td></tr>
+          <tr><td>ShipFast</td><td>2025-09-15</td><td>Auto-renew</td><td><span class="badge">Review</span></td></tr>
+        </table>
+      </div>
+
+      <div id="meeting" class="section card">
+        <h3>Meeting Agent</h3>
+        <p>Join Zoom/Teams, drop live charts, co-edit decks in real time.</p>
+        <ul>
+          <li>Slash command: <span class="badge">/aria show GM by SKU</span></li>
+          <li>Deck sync: auto-update slides during discussion</li>
+        </ul>
+      </div>
+
+      <div id="controls" class="section card">
+        <h3>Control Surface — Sensitivity Dials</h3>
+        <p>Adjust key drivers and see immediate impact.</p>
+        <table class="table">
+          <tr><th>Driver</th><th>Elasticity</th><th>Suggested Nudge</th></tr>
+          <tr><td>Price</td><td>+2.4x on profit</td><td>+1.0% in Q4</td></tr>
+          <tr><td>COGS</td><td>-1.8x on profit</td><td>-0.8% via vendor</td></tr>
+        </table>
+      </div>
+
+      <div class="footer">Static preview — layout & copy only. Live features arrive in staging.</div>
+    </main>
+
+    <section class="chat glass">
+      <header><div class="dot"></div><strong>Aria</strong><span style="margin-left:6px;color:var(--muted)">online</span></header>
+      <div class="body">
+        <div class="msg aria">Hi! I’m Aria — your AI CFO. I’ll learn your business and keep you ahead. Try TimeLens™, CFO Sense™, or PulseMatch™ from the left.</div>
+        <div class="msg user">Show why gross margin dipped in May.</div>
+        <div class="msg aria">COGS rose 2.4% on SKUs 1024/1071, plus FX headwinds. Want me to model a 1.5% supplier discount and 1% price nudge?</div>
+      </div>
+      <div class="footer">This chat is illustrative only in the static preview.</div>
+    </section>
+  </div>
+</body>
+</html>
